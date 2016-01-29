@@ -3,4 +3,4 @@
 #TODO exit if either fails/stop
 
 stunnel /opt/stunnel.conf
-rethinkdb proxy --bind all --join $RETHINKDB_JOIN_ADDR
+rethinkdb proxy --join $RETHINKDB_JOIN_ADDR --driver-port 28015
