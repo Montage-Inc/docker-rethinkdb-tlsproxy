@@ -14,8 +14,8 @@ RUN apt-get update \
 #TLS certs go here
 VOLUME ["/certs"]
 
-COPY /run.sh /bin
-COPY /stunnel.conf /conf/stunnel.conf
+COPY resources/run.sh /bin
+COPY resources/stunnel.conf /conf/stunnel.conf
 RUN chmod +x /bin/run.sh
 
 EXPOSE 28443
