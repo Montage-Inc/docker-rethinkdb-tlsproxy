@@ -5,8 +5,7 @@ MAINTAINER Jason Kraus <jkraus@editllc.com>
 ENV RETHINKDB_JOIN_ADDR 127.0.0.1:29105
 
 RUN mkdir -p /certs
-RUN mkdir -p /conf
-RUN mkdir -p /bin
+RUN mkdir -p /opt
 
 RUN apt-get update \
 	&& apt-get install -y stunnel4 \
@@ -15,10 +14,9 @@ RUN apt-get update \
 #TLS certs go here
 VOLUME ["/certs"]
 
-COPY resources/run.sh /bin
-COPY resources/stunnel.conf /conf/stunnel.conf
-RUN chmod +x /bin/run.sh
+COPY resources /opt
+RUN chmod +x /opt/run.sh
 
 EXPOSE 28443
 
-CMD ["/bin/run.sh"]
+CMD ["/opt/run.sh"]
