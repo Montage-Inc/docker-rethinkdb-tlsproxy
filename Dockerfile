@@ -6,6 +6,7 @@ ENV RETHINKDB_JOIN_ADDR 127.0.0.1:29105
 
 RUN mkdir -p /certs
 RUN mkdir -p /conf
+RUN mkdir -p /bin
 
 RUN apt-get update \
 	&& apt-get install -y stunnel4 \
