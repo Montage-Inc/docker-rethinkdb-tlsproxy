@@ -1,16 +1,16 @@
 #!/bin/bash
 
-if [ $CA_CERT ]
+if [[ $CA_CERT ]]
 then
   echo $CA_CERT > /cert/ca.pem
 fi
 
-if [ $SERVER_CERT ]
+if [[ $SERVER_CERT ]]
 then
   echo $SERVER_CERT > /cert/server.pem
 fi
 
-if [ $SERVER_KEY ]
+if [[ $SERVER_KEY ]]
 then
   echo $SERVER_KEY > /cert/server-key.pem
 fi
