@@ -2,17 +2,17 @@
 
 if [[ $CA_CERT ]]
 then
-  echo $CA_CERT > /cert/ca.pem
+  echo $CA_CERT > /certs/ca.pem
 fi
 
 if [[ $SERVER_CERT ]]
 then
-  echo $SERVER_CERT > /cert/server.pem
+  echo $SERVER_CERT > /certs/server.pem
 fi
 
 if [[ $SERVER_KEY ]]
 then
-  echo $SERVER_KEY > /cert/server-key.pem
+  echo $SERVER_KEY > /certs/server-key.pem
 fi
 
 
