@@ -19,4 +19,4 @@ echo "Authenticating Certificate Authority:"
 cat /certs/ca.pem
 
 stunnel /opt/stunnel.conf & \
-rethinkdb proxy --join $RETHINKDB_JOIN_ADDR --driver-port 28015 --server-name $SERVER_NAME
+rethinkdb proxy --join $RETHINKDB_JOIN_ADDR --driver-port 28015
