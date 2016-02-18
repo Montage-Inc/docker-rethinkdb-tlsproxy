@@ -13,6 +13,7 @@ fi
 if [[ $SERVER_KEY ]]
 then
   echo "$SERVER_KEY" > /certs/server-key.pem
+  chmod 600 /certs/server-key.pem
 fi
 
 echo "Authenticating Certificate Authority:"
