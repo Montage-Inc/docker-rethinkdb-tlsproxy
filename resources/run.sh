@@ -25,5 +25,5 @@ if [[ $RETHINKDB_JOIN_ADDR ]]
 then
   rethinkdb proxy --join $RETHINKDB_JOIN_ADDR --driver-port 28015
 else
-  rethinkdb proxy --driver-port 28015 --cluster-port 29015
+  rethinkdb proxy --driver-port 28015 --cluster-port 29015 --bind all
 fi
